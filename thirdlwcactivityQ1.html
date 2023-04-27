@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card title="Formulario">
+        <div class="container slds-m-around_medium">
+
+            <div class="inputbox slds-box slds-m-around_small">
+                <!--input nome-->
+                <lightning-input label="Nome" type="text" name="nome" onchange={handleOnChangeNome}></lightning-input>
+
+                <!--input peso-->
+                <lightning-input label="Peso" type="number" name="peso" step="0.1" onchange={handleOnChangePeso}></lightning-input>
+
+                <!--input altura-->
+                <lightning-input label="Altura" type="number" name="altura" step="0.01" onchange={handleOnChangeAltura}></lightning-input>
+            </div>
+
+            <lightning-button class="slds-m-around_xxx-small slds-align_absolute-center" variant="brand" label="Calcular IMC" onclick={calcularIMC}></lightning-button>
+            <br>
+
+            <div class="boxresults slds-align_absolute-center">
+                <p>{imc}</p>
+            </div>
+
+        </div>
+    </lightning-card>
+
+</template>
